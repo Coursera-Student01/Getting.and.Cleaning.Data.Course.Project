@@ -61,42 +61,17 @@ Data manipulation carried out by the script is performed in a following sequence
 2. Feature labels are read into the workspace with descriptive column names `"Feature.ID"`, `"Feature.Name"`.
 3. `train` and `test` data is read into the workspace with descriptive column names (`"Subject"`, `"Activity"`). `x` table data is read into the workspace with labels from `"Feature.Name"` column of `feature_labels` table.
 4. `Subject`, `Activity` and `Features` components (feature measurements are put within `measures_raw` data frame for further processing)  of `test` and `train` partitions are merged by rows.
-6. Descriptive activity names are assigned to activity data.
-7. `Subject`, `Activity` and `Features` components are merged into complete data set (`complete_dataset_raw`) by columns.
-8. `Mean` and `Standard Deviation` columns are extracted from `Features` component and combined within `measures_tidy` data frame. 
-9. A data set, which contains only `Mean` and `Standard Deviation` related variables is assembled by merging `Subject`, `Activity` with an output from previous step.
-10. An independent tidy data set with the average of each variable for each activity and each subject is created and written into `tidy_dataset.txt`.
+5. Descriptive activity names are assigned to activity data.
+6. `Subject`, `Activity` and `Features` components are merged into complete data set (`complete_dataset_raw`) by columns.
+7. `Mean` and `Standard Deviation` columns are extracted from `Features` component and combined within `measures_tidy` data frame. 
+8. A data set, which contains only `Mean` and `Standard Deviation` related variables is assembled by merging `Subject`, `Activity` with an output from previous step.
+9. An independent tidy data set with the average of each variable for each activity and each subject is created and written into `tidy_dataset.txt`.
 
 ### A note on *"tidy"* aspects of outcome data
 
-In manipulation step 6 descriptive activity names are assigned to activities IDs of the data set, as it is required in part 3 of the assignment. Variables, which contained `-mean` and `-std` now contain `Mean` and `Std` accordingly. Parenthesis and dots were removed from variable names. `BodyBody` was replaced with `Body`.
+In manipulation step 5 descriptive activity names are assigned to activities IDs of the data set, as it is required in part 3 of the assignment. Variables, which contained `-mean` and `-std` now contain `Mean` and `Std` accordingly. Parenthesis and dots were removed from variable names. `BodyBody` was replaced with `Body`.
 
 
 ### Acknowledgement
 
 I would like to mention that this project would be much harder to accomplish without [A really long advice thread for the Project](https://class.coursera.org/getdata-032/forum/thread?thread_id=26).
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
